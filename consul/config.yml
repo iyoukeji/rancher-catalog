@@ -1,0 +1,3 @@
+ consul:
+  description: Consul cluster
+  version: 0

@@ -1,0 +1,19 @@
+.catalog:
+  name: "Consul"
+  description: "Consul cluster"
+  version: "0.6"
+  uuid: consul-0
+  questions:
+    - variable: datacenter
+      label: "Data center name"
+      type: "string"
+      required: true
+    - variable: gossip_key
+      label: "Communication gossip key"
+      type: "multiline"
+      required: true
+consul:
+  scale: 3
+  metadata:
+    datacenter: "${datacenter}"
+    encrypt: "${gossip_key}"

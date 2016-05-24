@@ -1,0 +1,14 @@
+consul-conf:
+  image: docker-registry.iyoukeji.com/docker/consul-rancher-config
+  labels:
+    io.rancher.container.hostname_override: container_name
+  volumes_from:
+    - consul
+  net: "container:consul"
+consul:
+  image: docker-registry.iyoukeji.com/docker/consul-rancher
+  labels:
+    io.rancher.sidekicks: consul-conf
+  volumes:
+    - /opt/rancher/config
+    - /var/consul
