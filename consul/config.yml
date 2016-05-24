@@ -1,3 +1,4 @@
- consul:
-  description: Consul cluster
-  version: 0
+name: Consul
+description: Consul cluster
+version: 0.6-rancher1
+category: Clustering
